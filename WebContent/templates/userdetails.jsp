@@ -10,7 +10,7 @@
 </head>
 <body>
 	<form style="width: 75%">
-		<h2 style="text-align: center">From</h2>
+		<h2 style="text-align: center">Form</h2>
 		<table cellspacing="10" width="100%">
 			<tr>
 				<td>
@@ -23,13 +23,13 @@
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Party</label>
+							class="bar"></span> <label>Customer</label>
 					</div>
 				</td>
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Vehicle No</label>
+							class="bar"></span> <label>Commodity</label>
 					</div>
 				</td>
 
@@ -37,6 +37,34 @@
 			</tr>
 
 			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>From</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>To</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Type</label>
+					</div>
+				</td>
+
+			</tr>
+
+			<tr>
+			<td>
+					<div class="group">
+						<input type="text" maxlength="10"><span class="highlight"></span><span
+							class="bar"></span> <label>Vehicle No</label>
+					</div>
+				</td>
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
@@ -45,18 +73,34 @@
 				</td>
 				<td>
 					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Diesel At Port</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+			<td>
+					<div class="group">
 						<input type="text" id="outDate"><span class="highlight"></span><span
-							class="bar"></span> <label>Out Date</label>
+							class="bar"></span> <label>Starting Date</label>
 					</div>
 				</td>
 
 				<td>
 					<div class="group">
 						<input type="text" id="inDate"><span class="highlight"></span><span
-							class="bar"></span> <label>In Date</label>
+							class="bar"></span> <label>Return Date</label>
 					</div>
 
 				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Starting</label>
+					</div>
+				</td>
+				
 
 			</tr>
 
@@ -64,20 +108,20 @@
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Party</label>
+							class="bar"></span> <label>Ending</label>
 					</div>
 				</td>
 
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Destination</label>
+							class="bar"></span> <label>Trip KMS</label>
 					</div>
 				</td>
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Port Diesel</label>
+							class="bar"></span> <label>Avg</label>
 					</div>
 				</td>
 			</tr>
@@ -86,26 +130,9 @@
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Outside Diesel</label>
+							class="bar"></span> <label>Diesel Outside</label>
 					</div>
 				</td>
-				<td>
-					<div class="group">
-						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Out Reading</label>
-					</div>
-				</td>
-
-				<td>
-					<div class="group">
-						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>In Reading</label>
-					</div>
-				</td>
-
-			</tr>
-
-			<tr>
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
@@ -119,35 +146,49 @@
 							class="bar"></span> <label>RTO/PC</label>
 					</div>
 				</td>
-				<td>
-					<div class="group">
-						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>ACT/MNR</label>
-					</div>
-				</td>
-			</tr>
 
+			</tr>
 			<tr>
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Load/Unloading</label>
-					</div>
-				</td>
-				<td>
-					<div class="group">
-						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Weighment</label>
+							class="bar"></span> <label>ACT</label>
 					</div>
 				</td>
 
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Others</label>
+							class="bar"></span> <label>L/UN</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>WEIGHMEN</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>OTHERS</label>
 					</div>
 				</td>
 
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Trip Expenses</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Total Expenses</label>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -160,7 +201,13 @@
 				<td>
 					<div class="group">
 						<input type="text"><span class="highlight"></span><span
-							class="bar"></span> <label>Adv Balance</label>
+							class="bar"></span> <label>Balance From Advance</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Advance Returned</label>
 					</div>
 				</td>
 			</tr>
@@ -208,3 +255,6 @@
   </script>
 </body>
 </html>
+
+
+
