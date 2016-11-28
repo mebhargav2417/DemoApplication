@@ -1,7 +1,4 @@
-<html>
-<head>
-</head>
-<body>
+		
 	<form style="width: 50%" id="adduserform" name="adduserform"
 		action="AddUser">
 		<h2 style="text-align: center">Account Creation</h2>
@@ -14,7 +11,7 @@
 				class="bar"></span> <label>Employee ID</label>
 		</div>
 		<div class="group">
-			<input type="text" id="dobDate"><span class="highlight"></span><span
+			<input type="text" id="dobDate" class="hasDatepicker used"><span class="highlight"></span><span
 				class="bar"></span> <label>Employee DOB</label>
 		</div>
 		<div class="group">
@@ -28,7 +25,7 @@
 		<table>
 			<tr>
 				<td>
-					<button type="button" class="button buttonBlue">
+					<button type="submit" class="button buttonBlue">
 						Update
 						<div class="ripples buttonRipples">
 							<span class="ripplesCircle"></span>
@@ -45,8 +42,7 @@
 				</td>
 			</tr>
 		</table>
+			
 	</form>
 	
-	
-</body>
-</html>
+

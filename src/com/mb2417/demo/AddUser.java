@@ -54,13 +54,14 @@ public class AddUser extends HttpServlet {
 			EncryptDecrypt encrypt = new EncryptDecrypt();
 			connect = db.getConnection();
 			stmt = connect.createStatement();
-			query = "insert into pwd_login values (NULL,'" + request.getParameter("empMail") + "',"
-					+ "'"+ request.getParameter("empPwd") + "',"
+			String formatedDate = request.getParameter("dobDate").split("-")[2] + "-" + request.getParameter("dobDate").split("-")[1] + "-" + request.getParameter("dobDate").split("-")[0];
+			query = "insert into tbl_login values (null,'" + request.getParameter("empMail") + "',"
+					+ "'"+ encrypt.encryptDecrypt("demoapp123456789", "demoApplication1",request.getParameter("empPwd")) + "',"
 					+ "'"+ request.getParameter("empName") + "',"
 					+ "'"+ request.getParameter("empId") + "',"
-					+ "'"+ request.getParameter("dobDate") + "',"
+					+ "'"+ formatedDate + "',"
 					+ " now(),"
-					+ "'yes'";
+					+ "'yes')";
 			stmt.executeUpdate(query);
 			jsonRes.put("success","Insertion Success");
 			//response.getWriter().write(jsonRes.toString());
@@ -69,6 +70,7 @@ public class AddUser extends HttpServlet {
 			connect.close();
 		}catch(Exception e){
 			jsonRes.put("fail", "Insertion Failed");
+			System.out.println("Error: " + e.toString());
 		}
 		out.println(jsonRes.toString());
 	}

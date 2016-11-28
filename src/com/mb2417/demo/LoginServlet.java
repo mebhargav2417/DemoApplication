@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.sql.*;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,6 +69,7 @@ public class LoginServlet extends HttpServlet {
 		JSONObject jsonRes = new JSONObject();
 		Connection connect = null;
 		Statement stmt = null;
+		Parameters parameters = new Parameters();
 		String query = "";
 		String result = "";
 		try{
@@ -75,17 +77,20 @@ public class LoginServlet extends HttpServlet {
 			EncryptDecrypt encrypt = new EncryptDecrypt();
 			connect = db.getConnection();
 			stmt = connect.createStatement();
-			
+			RequestDispatcher rd;
 			query = "select pwd_login from tbl_login where userid_login = '" + request.getParameter("user") + "'";
 			ResultSet rs = stmt.executeQuery(query);
 			while(rs.next()){
 				result = rs.getString("pwd_login");
 			}
-			
+			parameters.setLoginUser(request.getParameter("user"));
 			if(encrypt.encryptDecrypt("demoapp123456789", "demoApplication1", request.getParameter("pwd")).contentEquals(result) ){
 				jsonRes.put("success",request.getParameter("user"));
+				parameters.setSuccessLogin(request.getParameter("user"));
+				
 			} else {
 				jsonRes.put("fail", "Authentication Failed");
+				
 			}
 			out.println(jsonRes.toString());
 			//response.getWriter().write(jsonRes.toString());

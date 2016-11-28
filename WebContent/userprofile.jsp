@@ -34,7 +34,7 @@
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Profile</a>
-          <a href="#fill" class="mdl-layout__tab">Fill</a>
+          <a href="#fill" class="mdl-layout__tab">New</a>
           <a href="#view" class="mdl-layout__tab">View</a>
           <a href="#modify" class="mdl-layout__tab">Modify</a>
           <a href="#" class="mdl-layout__tab">Logout</a>
@@ -50,7 +50,230 @@
         </div>
         <div class="mdl-layout__tab-panel" id="fill">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <h6>Fill</h6>
+           	<form >
+		
+		<table cellspacing="10" width="100%">
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text" maxlength="10"><span class="highlight"></span><span
+							class="bar"></span> <label>LR No</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Customer</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Commodity</label>
+					</div>
+				</td>
+
+
+			</tr>
+
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>From</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>To</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Type</label>
+					</div>
+				</td>
+
+			</tr>
+
+			<tr>
+			<td>
+					<div class="group">
+						<input type="text" maxlength="10"><span class="highlight"></span><span
+							class="bar"></span> <label>Vehicle No</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Driver</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Diesel At Port</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+			<td>
+					<div class="group">
+						<input type="text" id="outDate"><span class="highlight"></span><span
+							class="bar"></span> <label>Starting Date</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text" id="inDate"><span class="highlight"></span><span
+							class="bar"></span> <label>Return Date</label>
+					</div>
+
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Starting</label>
+					</div>
+				</td>
+				
+
+			</tr>
+
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Ending</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Trip KMS</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Avg</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Diesel Outside</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Toll</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>RTO/PC</label>
+					</div>
+				</td>
+
+			</tr>
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>ACT</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>L/UN</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>WEIGHMEN</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>OTHERS</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Trip Expenses</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Total Expenses</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Advance</label>
+					</div>
+				</td>
+
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Balance From Advance</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text"><span class="highlight"></span><span
+							class="bar"></span> <label>Advance Returned</label>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<button type="button" class="button buttonBlue">
+						Submit
+						<div class="ripples buttonRipples">
+							<span class="ripplesCircle"></span>
+						</div>
+					</button>
+				</td>
+
+				<td>
+					<button type="button" class="button buttonBlue">
+						Cancel
+						<div class="ripples buttonRipples">
+							<span class="ripplesCircle"></span>
+						</div>
+					</button>
+				</td>
+			</tr>
+		</table>
+	</form>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="view">
@@ -77,6 +300,20 @@
 	<script src="js/material.min.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/tabchange.js"></script>
-
+	<script src="js/jquery-ui.js"></script>
+	<script>
+  		$( function() {
+    		$( "#inDate" ).datepicker({
+    			changeMonth: true,
+    	        changeYear: true,
+    	        showButtonPanel: true,
+    		});
+    		$( "#outDate" ).datepicker({
+    			changeMonth: true,
+    	        changeYear: true,
+    	        showButtonPanel: true,
+    		});
+  		} );
+  </script>
 </body>
 </html>
