@@ -16,4 +16,12 @@
     <servlet-name>AddUser</servlet-name>
     <url-pattern>/AddUser/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AddDetails</servlet-name>
+    <servlet-class>com.mb2417.demo.AddDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDetails</servlet-name>
+    <url-pattern>/AddDetails/*</url-pattern>
+  </servlet-mapping>
 </web-app>

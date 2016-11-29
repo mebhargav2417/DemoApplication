@@ -87,6 +87,7 @@ public class LoginServlet extends HttpServlet {
 			if(encrypt.encryptDecrypt("demoapp123456789", "demoApplication1", request.getParameter("pwd")).contentEquals(result) ){
 				jsonRes.put("success",request.getParameter("user"));
 				parameters.setSuccessLogin(request.getParameter("user"));
+				parameters.setLoginedUser(request.getParameter("user"));
 				
 			} else {
 				jsonRes.put("fail", "Authentication Failed");
