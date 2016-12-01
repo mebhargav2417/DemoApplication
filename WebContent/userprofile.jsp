@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="css/userstyle.css" />
 <link rel="stylesheet" type="text/css" href="css/userstylepurple.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
 <style>
     #view-source {
       position: fixed;
@@ -54,9 +55,9 @@
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="view">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <h6>View</h6>
-          </section>
+          <!-- <section class="section--center mdl-grid mdl-grid--no-spacing"> -->
+            <jsp:include page="templates/viewdetails.jsp" />
+          <!-- </section> -->
         </div>
         <div class="mdl-layout__tab-panel" id="modify">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
@@ -78,6 +79,12 @@
 	<script src="js/index.js"></script>
 	<script src="js/tabchange.js"></script>
 	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script>
+		$(document).ready(function() {
+	    	$('#myTable').DataTable();
+		} );
+	</script>
 	<script>
   		$( function() {
     		$( "#inDate" ).datepicker({

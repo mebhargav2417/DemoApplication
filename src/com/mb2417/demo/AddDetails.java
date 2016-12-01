@@ -96,7 +96,7 @@ public class AddDetails extends HttpServlet {
 							+ "'"+  request.getParameter("advReturned") + "',"
 							+ "'"+  parameters.getLoginedUser() + "',"
 							+ "now(),"
-							+ "'null',"
+							+ "now(),"
 							+ "'',"
 							+ "'"+  request.getParameter("totExp") + "')";
 			stmt.executeUpdate(query);
@@ -105,6 +105,7 @@ public class AddDetails extends HttpServlet {
 			out.close();
 			stmt.close();
 			connect.close();
+			jsonRes.put("success", "Data Successfully Stored");
 		}catch(Exception e){
 			jsonRes.put("fail", "Insertion Failed");
 			System.out.println("Error: " + e.toString());
