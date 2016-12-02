@@ -212,8 +212,8 @@
 				</td>
 
 				<td>
-					<button type="button" class="button buttonBlue">
-						Cancel
+					<button type="reset" class="button buttonBlue">
+						Clear
 						<div class="ripples buttonRipples">
 							<span class="ripplesCircle"></span>
 						</div>

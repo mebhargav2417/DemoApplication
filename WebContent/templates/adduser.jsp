@@ -33,7 +33,7 @@
 					</button>
 				</td>
 				<td>
-					<button type="button" class="button buttonBlue">
+					<button type="reset" class="button buttonBlue">
 						Clear
 						<div class="ripples buttonRipples">
 							<span class="ripplesCircle"></span>

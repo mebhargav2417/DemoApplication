@@ -47,7 +47,7 @@
           <a href="#usrmgt" class="mdl-layout__tab">User Management</a>
           <a href="#datamgt" class="mdl-layout__tab">Data Management</a>
           <a href="#admsettings" class="mdl-layout__tab">Settings</a>
-          <a href="#" class="mdl-layout__tab">Logout</a>
+          <a href="#" class="mdl-layout__tab" id="logoutAdmin">Logout</a>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -110,6 +110,11 @@
 		});
 	});
 	</script>
+	<script>
+  	$('#logoutAdmin').on('click',function(){
+  		window.location = "index.jsp";
+  	});
+  </script>
 	<script>
 	$(document).on("submit", "#adduserform", function(event) {
 	    var $form = $(this);

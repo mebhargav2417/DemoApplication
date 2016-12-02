@@ -9,7 +9,13 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="css/userstyle.css" />
 <link rel="stylesheet" type="text/css" href="css/userstylepurple.css">
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+<script src="js/jquery/3.1.1/jquery-3.1.1.min.js"></script>
+	<script src="js/material.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/tabchange.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.dataTables.js"></script>
 <style>
     #view-source {
       position: fixed;
@@ -38,7 +44,7 @@
           <a href="#fill" class="mdl-layout__tab">New</a>
           <a href="#view" class="mdl-layout__tab">View</a>
           <a href="#modify" class="mdl-layout__tab">Modify</a>
-          <a href="#" class="mdl-layout__tab">Logout</a>
+          <a href="#" class="mdl-layout__tab" id="logoutUser">Logout</a>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -74,18 +80,15 @@
 	</div>
 
 
-	<script src="js/jquery/3.1.1/jquery-3.1.1.min.js"></script>
-	<script src="js/material.min.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/tabchange.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<script src="js/jquery.dataTables.min.js"></script>
+	
 	<script>
 		$(document).ready(function() {
 	    	$('#myTable').DataTable();
+	    	//$("#myTable_filter").hide();
+	    	$("#myTable_length").hide();
+	    	
 		} );
-	</script>
-	<script>
+	
   		$( function() {
     		$( "#inDate" ).datepicker({
     			changeMonth: true,
@@ -98,8 +101,11 @@
     	        showButtonPanel: true,
     		});
   		} );
-  </script>
-  <script>
+  
+  	$('#logoutUser').on('click',function(){
+  		window.location = "index.jsp";
+  	});
+  
 	$(document).on("submit", "#addform", function(event) {
 	    var $form = $(this);
 	   
