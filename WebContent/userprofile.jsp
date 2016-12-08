@@ -1,3 +1,13 @@
+<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.io.*,java.util.*,java.net.*" %>
+<%@ page import="java.sql.*"%>
+<%@ page import="com.mb2417.demo.*"%>
+<%@ page import="org.json.simple.JSONObject"%>
+<%
+					UserProfileView user = new UserProfileView();
+					JSONObject obj = user.getUserDetails();
+				%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +45,7 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3 style="color:#FFFFFF">Name </h3>
+          <h3 style="color:#FFFFFF"> Welcome <%= obj.get("empName") %> </h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
@@ -50,9 +60,11 @@
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
-          	
-            	<h6>Profile</h6>
-            
+            	<div id="user_details" name="user_details" style="text-align:left">
+            		<h4>Name: <%= obj.get("empName") %></h4>
+            		<h4>Mail: <%= obj.get("id") %></h4>
+            		<h4>Date of birth: <%= obj.get("dob") %></h4>
+            	</div>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="fill">
@@ -84,7 +96,7 @@
 	<script>
 		$(document).ready(function() {
 	    	$('#myTable').DataTable();
-	    	//$("#myTable_filter").hide();
+	    	$("#myTable_filter").hide();
 	    	$("#myTable_length").hide();
 	    	
 		} );
@@ -112,6 +124,7 @@
 	    $.post($form.attr("action"), $form.serialize(), function(response) {
 	       if(response.success){
 	    	   alert(response.success);
+	    	   $('#addform > input').clear();
 	       } else {
 	    	   alert(response.fail);
 	       }

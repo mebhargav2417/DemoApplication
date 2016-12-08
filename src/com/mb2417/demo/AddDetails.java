@@ -100,7 +100,7 @@ public class AddDetails extends HttpServlet {
 							+ "'',"
 							+ "'"+  request.getParameter("totExp") + "')";
 			stmt.executeUpdate(query);
-			jsonRes.put("success","Insertion Success");
+			//jsonRes.put("success","Insertion Success");
 			//response.getWriter().write(jsonRes.toString());
 			out.close();
 			stmt.close();
