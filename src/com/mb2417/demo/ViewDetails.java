@@ -46,6 +46,7 @@ public class ViewDetails extends HttpServlet {
 		response.setContentType("text/json;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		JSONObject jsonRes = new JSONObject();
+		JSONObject mainJson = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
 		Connection connect = null;
 		Statement stmt = null;
@@ -57,8 +58,14 @@ public class ViewDetails extends HttpServlet {
 			EncryptDecrypt encrypt = new EncryptDecrypt();
 			connect = db.getConnection();
 			stmt = connect.createStatement();
-			query = "select * from tbl_login where empName_login != 'admin' && available_login == 'yes'";
+			query = "select count(*) from tbl_details";
 			ResultSet rs = stmt.executeQuery(query);
+			while(rs.next()){
+				mainJson.put("count", rs.getString(0));
+			}
+			
+			query = "select * from tbl_login where empName_login != 'admin' && available_login == 'yes'";
+			rs = stmt.executeQuery(query);
 			while(rs.next()){
 				jsonRes.put("sno", rs.getInt("sno_details"));
 				jsonRes.put("lrno", rs.getString("lrno_details"));
@@ -90,7 +97,7 @@ public class ViewDetails extends HttpServlet {
 				jsonRes.put("totalexp", rs.getString("totalexp_details"));
 				jsonRes.put("enteredby", rs.getString("dataenteredby_details"));
 				
-//				jsonArray.put("details",jsonRes);
+				
 			}
 			//jsonRes.put("success","Insertion Success");
 			//response.getWriter().write(jsonRes.toString());

@@ -1,6 +1,9 @@
 <%@ page import="com.mb2417.demo.*"%>
+<%@ page import="org.json.simple.JSONObject"%>
 <%
 	Parameters parameters = new Parameters();
+	DashboardDetails dashboard = new DashboardDetails();
+	JSONObject getDetails = dashboard.getDashboardDetails();
 	if(parameters.getLoginUser() == null)
 		parameters.setLoginUser("empty");
 	if(parameters.getSuccessLogin() == null)
@@ -53,9 +56,16 @@
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="dashboard">
           <section class="section--center mdl-grid mdl-grid--no-spacing ">
-          	
-            	<h6>Dashboard</h6>
-            
+          <label id="empCount" hidden ><%= getDetails.get("countEmp") %></label>
+          <label id="empCountAva" hidden><%= getDetails.get("countEmpAvailable") %></label>
+          <label id="empCountNotAva" hidden><%= getDetails.get("countEmpNotAvailable") %></label>
+          <label id="details" hidden></label>
+          	<div>
+          		<span id="empDetails">
+          		</span>
+          		<span id="dataDetails">
+          		</span>
+          	</div>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="usrmgt">
@@ -95,6 +105,7 @@
 	<script src="js/jquery/3.1.1/jquery-3.1.1.min.js"></script>
 	<script src="js/material.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/chart.js"></script>
 	<script src="js/tabchange.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script>
@@ -130,6 +141,25 @@
 	    event.preventDefault(); // Important! Prevents submitting the form.
 	});
 	</script>
+	<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Employees', $('#empCount').val()],
+          ['Available',  $('#empCountAva').val()],
+          ['Not Available', $('#empCountNotAva').val()]
+        ]);
+
+        var options = {
+          title: 'Employee Details',
+           pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('empDetails'));
+        chart.draw(data, options);
+      }
+    </script>
 	
 </body>
 </html>
