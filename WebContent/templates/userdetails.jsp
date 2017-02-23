@@ -4,24 +4,44 @@
 			<tr>
 				<td>
 					<div class="group">
+						<input type="text" maxlength="15" required id="vehicleno" name="vehicleno"><span class="highlight"></span><span
+							class="bar"></span> <label>Vehicle No</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text" id="starting" name="starting" required maxlength="20"><span class="highlight"></span><span
+							class="bar"></span> <label>Starting at port</label>
+					</div>
+				</td>				
+				<td>
+					<div class="group">
 						<input type="text" id="lrno" name="lrno" required maxlength="10"><span class="highlight"></span><span
 							class="bar"></span> <label>LR No</label>
 					</div>
 				</td>
+			</tr>
 
+			<tr>
 				<td>
 					<div class="group">
-						<input type="text" id="customer" name="customer" required maxlength="45"><span class="highlight"></span><span
-							class="bar"></span> <label>Customer</label>
+						<input type="text" id="driver" name="driver" required maxlength="45"><span class="highlight"></span><span
+							class="bar"></span> <label>Driver Name</label>
 					</div>
 				</td>
 				<td>
 					<div class="group">
-						<input type="text" id="commodity" name="commodity" required maxlength="45"><span class="highlight"></span><span
-							class="bar"></span> <label>Commodity</label>
+						<input type="text" id="ending" name="ending" required maxlength="20"><span class="highlight"></span><span
+							class="bar"></span> <label>Ending</label>
 					</div>
 				</td>
-
+				
+				<td>
+					<div class="group">
+						<input type="text" id="type" name="type" required maxlength="45"><span class="highlight"></span><span
+							class="bar"></span> <label>Type</label>
+					</div>
+				</td>
 
 			</tr>
 
@@ -33,31 +53,24 @@
 					</div>
 				</td>
 				<td>
-					<div class="group">
-						<input type="text" id="to" name="to" required maxlength="45"><span class="highlight"></span><span
-							class="bar"></span> <label>To</label>
+					<div class="group" >
+						<input type="text" id="tripKMS" name="tripKMS" required maxlength="20"><span class="highlight"></span><span
+							class="bar"></span> <label>Trip KMS</label>
 					</div>
 				</td>
 				<td>
 					<div class="group">
-						<input type="text" id="type" name="type" required maxlength="45"><span class="highlight"></span><span
-							class="bar"></span> <label>Type</label>
+						<input type="text" id="outDate" name="outDate" required><span class="highlight"></span><span
+							class="bar"></span> <label>Starting Date</label>
 					</div>
 				</td>
-
 			</tr>
 
 			<tr>
-			<td>
-					<div class="group">
-						<input type="text" maxlength="15" required id="vehicleno" name="vehicleno"><span class="highlight"></span><span
-							class="bar"></span> <label>Vehicle No</label>
-					</div>
-				</td>
 				<td>
 					<div class="group">
-						<input type="text" id="driver" name="driver" required maxlength="45"><span class="highlight"></span><span
-							class="bar"></span> <label>Driver</label>
+						<input type="text" id="to" name="to" required maxlength="45"><span class="highlight"></span><span
+							class="bar"></span> <label>To</label>
 					</div>
 				</td>
 				<td>
@@ -66,16 +79,6 @@
 							class="bar"></span> <label>Diesel At Port</label>
 					</div>
 				</td>
-			</tr>
-
-			<tr>
-			<td>
-					<div class="group">
-						<input type="text" id="outDate" name="outDate" required><span class="highlight"></span><span
-							class="bar"></span> <label>Starting Date</label>
-					</div>
-				</td>
-
 				<td>
 					<div class="group">
 						<input type="text" id="inDate" name="inDate" required><span class="highlight"></span><span
@@ -83,30 +86,22 @@
 					</div>
 
 				</td>
-				<td>
-					<div class="group">
-						<input type="text" id="starting" name="starting" required maxlength="20"><span class="highlight"></span><span
-							class="bar"></span> <label>Starting</label>
-					</div>
-				</td>
-				
-
 			</tr>
 
 			<tr>
 				<td>
 					<div class="group">
-						<input type="text" id="ending" name="ending" required maxlength="20"><span class="highlight"></span><span
-							class="bar"></span> <label>Ending</label>
+						<input type="text" id="advance" name="advance" required maxlength="20"><span class="highlight"></span><span
+							class="bar"></span> <label>Advance Paid</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text" id="totExp" name="totExp" required maxlength="20"><span class="highlight"></span><span
+							class="bar"></span> <label>Total Expenses</label>
 					</div>
 				</td>
 
-				<td>
-					<div class="group" >
-						<input type="text" id="tripKMS" name="tripKMS" required maxlength="20"><span class="highlight"></span><span
-							class="bar"></span> <label>Trip KMS</label>
-					</div>
-				</td>
 				<td>
 					<div class="group">
 						<input type="text" id="avg" name="avg" required maxlength="20"><span class="highlight"></span><span
@@ -115,7 +110,7 @@
 				</td>
 			</tr>
 
-			<tr>
+			<tr>				
 				<td>
 					<div class="group">
 						<input type="text" id="dOutside" name="dOutside" required maxlength="20"><span class="highlight"></span><span
@@ -165,32 +160,31 @@
 							class="bar"></span> <label>OTHERS</label>
 					</div>
 				</td>
-
+				<td>
+					<div class="group">
+						<input type="text" id="customer" name="customer" required maxlength="45"><span class="highlight"></span><span
+							class="bar"></span> <label>Customer</label>
+					</div>
+				</td>
 				<td>
 					<div class="group">
 						<input type="text" id="tripExp" name="tripExp" required maxlength="20"><span class="highlight"></span><span
 							class="bar"></span> <label>Trip Expenses</label>
 					</div>
 				</td>
-				<td>
-					<div class="group">
-						<input type="text" id="totExp" name="totExp" required maxlength="20"><span class="highlight"></span><span
-							class="bar"></span> <label>Total Expenses</label>
-					</div>
-				</td>
+				
 			</tr>
 			<tr>
 				<td>
 					<div class="group">
-						<input type="text" id="advance" name="advance" required maxlength="20"><span class="highlight"></span><span
-							class="bar"></span> <label>Advance</label>
-					</div>
-				</td>
-
-				<td>
-					<div class="group">
 						<input type="text" id="balFromAdv" name="balFromAdv" required maxlength="20"><span class="highlight"></span><span
 							class="bar"></span> <label>Balance From Advance</label>
+					</div>
+				</td>
+				<td>
+					<div class="group">
+						<input type="text" id="commodity" name="commodity" required maxlength="45"><span class="highlight"></span><span
+							class="bar"></span> <label>Commodity</label>
 					</div>
 				</td>
 				<td>

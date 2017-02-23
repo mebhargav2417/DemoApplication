@@ -33,6 +33,7 @@ public class EncryptDecrypt {
 			public String decryptDecrypt(String key, String initVector, String encrypted)
 			throws Exception {
 			byte[] original = null, textEncrypted = null;
+			
 			try {
 			IvParameterSpec iv = new IvParameterSpec(
 			initVector.getBytes("UTF-8"));
@@ -44,7 +45,7 @@ public class EncryptDecrypt {
 
 			original = cipher
 			.doFinal(Base64.decodeBase64(encrypted.getBytes()));
-
+			
 			return new String(original);
 			} catch (Exception ex) {
 			ex.printStackTrace();
